@@ -21,15 +21,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 //        let space = d_width / 6
-        view.layoutIfNeeded()
 
-        if let layout = collection.collectionViewLayout as? MMBanerLayout {
+        self.view.layoutIfNeeded()
+
+        DispatchQueue.main.async {
             
-            layout.itemSize = self.collection.frame.insetBy(dx: 60, dy: 0).size
-            //            layout.angle = 45
-            layout.itemSpace = 8.0
-            layout.autoPlayStatus = .play(duration: 3.0)
-            layout.setInfinite(isInfinite: true, completed:nil)
+            if let layout = self.collection.collectionViewLayout as? MMBanerLayout {
+                layout.itemSize = self.collection.frame.insetBy(dx: 60, dy: 0).size
+                //            layout.angle = 45
+                layout.itemSpace = 8.0
+                layout.autoPlayStatus = .play(duration: 3.0)
+                layout.setInfinite(isInfinite: true, completed:nil)
+            }
         }
         
         // Do any additional setup after loading the view, typically from a nib.
