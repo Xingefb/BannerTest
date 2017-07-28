@@ -14,6 +14,9 @@
 		4037205B1F28308F003B4DEF /* LoSelf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 403720591F28308F003B4DEF /* LoSelf.xcdatamodeld */; };
 		4037205D1F28308F003B4DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4037205C1F28308F003B4DEF /* Assets.xcassets */; };
 		403720601F28308F003B4DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4037205E1F28308F003B4DEF /* LaunchScreen.storyboard */; };
+		40BE44CD1F2989BD00347C0C /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE44CC1F2989BD00347C0C /* HomeHeader.swift */; };
+		40BE44D31F298EDF00347C0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE44D21F298EDF00347C0C /* HomeViewController.swift */; };
+		40BE44D51F29946300347C0C /* HeaderBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE44D41F29946300347C0C /* HeaderBannerCell.swift */; };
 		F8024F2D5AD007BD8F328A40 /* Pods_LoSelf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2288369E71571BD13B5C01DA /* Pods_LoSelf.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		4037205C1F28308F003B4DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4037205F1F28308F003B4DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		403720611F28308F003B4DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40BE44CC1F2989BD00347C0C /* HomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		40BE44D21F298EDF00347C0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		40BE44D41F29946300347C0C /* HeaderBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBannerCell.swift; sourceTree = "<group>"; };
 		4E3D9D95D8E038EF2BFA9BCA /* Pods-LoSelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoSelf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoSelf/Pods-LoSelf.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,12 +81,15 @@
 			children = (
 				403720521F28308F003B4DEF /* AppDelegate.swift */,
 				403720541F28308F003B4DEF /* ViewController.swift */,
+				40BE44D21F298EDF00347C0C /* HomeViewController.swift */,
 				403720561F28308F003B4DEF /* Main.storyboard */,
 				4037205C1F28308F003B4DEF /* Assets.xcassets */,
 				4037205E1F28308F003B4DEF /* LaunchScreen.storyboard */,
 				403720611F28308F003B4DEF /* Info.plist */,
 				403720591F28308F003B4DEF /* LoSelf.xcdatamodeld */,
 				402A59791F28616B00E14AF0 /* BannerCell.swift */,
+				40BE44CC1F2989BD00347C0C /* HomeHeader.swift */,
+				40BE44D41F29946300347C0C /* HeaderBannerCell.swift */,
 			);
 			path = LoSelf;
 			sourceTree = "<group>";
@@ -226,10 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BE44D51F29946300347C0C /* HeaderBannerCell.swift in Sources */,
 				403720551F28308F003B4DEF /* ViewController.swift in Sources */,
 				402A597A1F28616B00E14AF0 /* BannerCell.swift in Sources */,
 				403720531F28308F003B4DEF /* AppDelegate.swift in Sources */,
 				4037205B1F28308F003B4DEF /* LoSelf.xcdatamodeld in Sources */,
+				40BE44CD1F2989BD00347C0C /* HomeHeader.swift in Sources */,
+				40BE44D31F298EDF00347C0C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,8 +60,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mCG-nG-0F0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="125"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mCG-nG-0F0" secondAttribute="height" multiplier="3:1" id="p6I-zJ-IXD"/>
+                                </constraints>
                                 <collectionViewLayout key="collectionViewLayout" id="xJg-mh-Z92" customClass="MMBanerLayout" customModule="MMBannerLayout"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="QJj-L5-Poy" customClass="BannerCell" customModule="LoSelf" customModuleProvider="target">
@@ -73,6 +76,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBI-ix-AaQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="116"/>
+                                                    <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -99,7 +103,6 @@
                             <constraint firstItem="mCG-nG-0F0" firstAttribute="top" secondItem="nIF-Qk-ibo" secondAttribute="bottom" id="AK0-r7-tUH"/>
                             <constraint firstAttribute="trailing" secondItem="mCG-nG-0F0" secondAttribute="trailing" id="MBx-0J-FZb"/>
                             <constraint firstItem="mCG-nG-0F0" firstAttribute="leading" secondItem="ZNF-Fl-gjB" secondAttribute="leading" id="Ml8-eJ-Oky"/>
-                            <constraint firstItem="mCG-nG-0F0" firstAttribute="height" secondItem="ZNF-Fl-gjB" secondAttribute="height" multiplier="0.3" id="Phx-cN-DZg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="成绩" id="SJC-Zh-beM"/>
@@ -203,7 +206,7 @@
         <!--User-->
         <scene sceneID="USI-UT-7eW">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UeV-tt-x6M" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UeV-tt-x6M" customClass="HomeViewController" customModule="LoSelf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t7B-1P-Pgh"/>
                         <viewControllerLayoutGuide type="bottom" id="JhZ-SO-gaM"/>
@@ -215,6 +218,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="yNu-ce-WCY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="VXF-ab-m4x" customClass="HomeHeader" customModule="LoSelf" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VYi-c9-3db">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewLayout key="collectionViewLayout" id="Bke-di-39S" customClass="MMBanerLayout" customModule="MMBannerLayout"/>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderBannerCell" id="7D4-XQ-Nln" customClass="HeaderBannerCell" customModule="LoSelf" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-13-5Dj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="Ifl-13-5Dj" firstAttribute="leading" secondItem="7D4-XQ-Nln" secondAttribute="leading" id="4P1-tY-hgs"/>
+                                                        <constraint firstItem="Ifl-13-5Dj" firstAttribute="top" secondItem="7D4-XQ-Nln" secondAttribute="top" id="MOi-nH-0ji"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ifl-13-5Dj" secondAttribute="bottom" id="jeD-N7-PyL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ifl-13-5Dj" secondAttribute="trailing" id="yyN-Yq-VK7"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="375" height="120"/>
+                                                    <connections>
+                                                        <outlet property="imgView" destination="Ifl-13-5Dj" id="OWu-h3-2oL"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="VXF-ab-m4x" id="dxq-ST-uru"/>
+                                                <outlet property="delegate" destination="VXF-ab-m4x" id="i3o-ma-iAW"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="VYi-c9-3db" secondAttribute="bottom" id="4Rm-Fc-cVr"/>
+                                        <constraint firstAttribute="trailing" secondItem="VYi-c9-3db" secondAttribute="trailing" id="GzM-pl-6fV"/>
+                                        <constraint firstItem="VYi-c9-3db" firstAttribute="leading" secondItem="VXF-ab-m4x" secondAttribute="leading" id="gvO-ot-POV"/>
+                                        <constraint firstItem="VYi-c9-3db" firstAttribute="top" secondItem="VXF-ab-m4x" secondAttribute="top" id="rng-0J-lXD"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="collection" destination="VYi-c9-3db" id="eJg-39-wj2"/>
+                                    </connections>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="UeV-tt-x6M" id="2Za-bw-5v0"/>
+                                    <outlet property="delegate" destination="UeV-tt-x6M" id="Kgx-oB-bhf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,10 +283,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="User" id="4Ky-cg-6rD"/>
+                    <connections>
+                        <outlet property="header" destination="VXF-ab-m4x" id="GZa-4m-Zzo"/>
+                        <outlet property="table" destination="yNu-ce-WCY" id="Khh-jq-fQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhu-TH-obe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-498"/>
+            <point key="canvasLocation" x="168.80000000000001" y="-498.80059970014997"/>
         </scene>
     </scenes>
 </document>
