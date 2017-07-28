@@ -142,7 +142,19 @@
                     <view key="view" contentMode="scaleToFill" id="PVb-B3-ce6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1o5-73-AIT">
+                                <rect key="frame" x="83" y="244" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1o5-73-AIT" firstAttribute="leading" secondItem="PVb-B3-ce6" secondAttribute="leading" constant="83" id="7C5-nq-L7x"/>
+                            <constraint firstAttribute="trailing" secondItem="1o5-73-AIT" secondAttribute="trailing" constant="52" id="KZw-5J-jwk"/>
+                            <constraint firstItem="lpm-Pz-nFa" firstAttribute="top" secondItem="1o5-73-AIT" secondAttribute="bottom" constant="246" id="LAd-WR-AXR"/>
+                            <constraint firstItem="1o5-73-AIT" firstAttribute="top" secondItem="nf7-zk-Czk" secondAttribute="bottom" constant="180" id="My1-2B-gRS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="竞争" id="KXJ-Ec-sFI"/>
                 </viewController>
